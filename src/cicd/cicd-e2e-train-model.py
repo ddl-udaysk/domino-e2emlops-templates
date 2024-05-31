@@ -105,7 +105,7 @@ def main():
             get_project_id(domino_url, env_variables["DOMINO_PROJECT_NAME"], inputs.DOMINO_USER_API_KEY),
             inputs.DOMINO_USER_API_KEY,
             env_variables["DOMINO_MODEL_TRAIN_SCRIPT"],
-            inputs.DOMINO_ENV.lower(),
+            inputs.DOMINO_ENV.lower()[:inputs.DOMINO_ENV.lower().find("-")],
             env_variables["DOMINO_HARDWARE_TIER_NAME"],
             env_variables["DOMINO_ENVIRONMENT_ID"],
     )
