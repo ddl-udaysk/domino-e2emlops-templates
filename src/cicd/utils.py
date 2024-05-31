@@ -45,6 +45,9 @@ def parse_evn_var(env_variables,section):
     env_variables["DOMINO_MODEL_TYPE"] = read_config(section, "domino_model_type")
     env_variables["DOMINO_TARGET_STAGE"] = read_config(section, "domino_target_stage")
     env_variables["DOMINO_REVIEWER"] = read_config(section, "domino_reviewer")
+    env_variables["DOMINO_DATA_PREP_SCRIPT"] = read_config(section, "domino_data_prep_script")
+    env_variables["DOMINO_MODEL_TRAIN_SCRIPT"] = read_config(section, "domino_model_train_script")
+
 
     env_variables["DOMINO_JOB_OP"] = read_config(section, "domino_job_op")
     env_variables["DOMINO_JOB_COMMAND"] = read_config(section, "domino_job_command")
