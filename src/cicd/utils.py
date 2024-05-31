@@ -22,7 +22,8 @@ def read_config(section, key):
    dir_path = os.path.dirname(os.path.realpath(__file__))
    filepath = dir_path + "/" + "cicd-e2e-mlops-env-variables.ini"
    config.read(filepath)
-   return config[section][key]
+   return config.get(section, key, fallback='')
+   #return config[section][key]
 
 
 
