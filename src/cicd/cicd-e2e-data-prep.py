@@ -102,10 +102,10 @@ def main():
         api_key=inputs.DOMINO_USER_API_KEY,
         host=f"https://{env_variables['DOMINO_API_HOST']}",
     )
-
+#[{"id": "6659d73cc9194314841bcf46", "name": "gsk_e2emlops_demo", "description": "", "visibility": "Private", "ownerId": "6287de57353f04723052b720", "ownerUsername": "udaysk", "collaboratorIds": [], "collaborators": [], "tags": [], "stageId": "6255e8f024a9d58fff02e957", "stageName": "Ideation", "status": "active", "isBlocked": false, "stageUpdateTimeInMillis": 1717163839491, "statusUpdateTimeInMillis": 1717163839491}]
     job_start(
             start_job_url,
-            get_project_id(domino_url, env_variables["DOMINO_PROJECT_NAME"], inputs.DOMINO_USER_API_KEY),
+            get_project_id(domino_url, env_variables["DOMINO_PROJECT_NAME"], inputs.DOMINO_USER_API_KEY)[0]["id"],
             inputs.DOMINO_USER_API_KEY,
             env_variables["DOMINO_DATA_PREP_SCRIPT"],
             inputs.DOMINO_ENV.lower(),
