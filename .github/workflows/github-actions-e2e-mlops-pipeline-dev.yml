@@ -85,4 +85,4 @@ jobs:
         # flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Deploy to Domino Dev
       run: |
-        python src/cicd/cicd-e2e-deploy-models.py ${{ vars.DOMINO_ENV }}-MODEL-DEPLOY ${{ secrets.DOMINO_USER_API_KEY }}          
+        python src/cicd/cicd-e2e-deploy-model.py ${{ vars.DOMINO_ENV }}-MODEL-DEPLOY ${{ secrets.DOMINO_USER_API_KEY }}          
