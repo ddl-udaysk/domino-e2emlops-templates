@@ -41,6 +41,7 @@ jobs:
   modeltrain-staging:
     runs-on: ubuntu-latest
     environment: 'STAGE-MODEL-TRAIN'
+    needs: dataprep-staging
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -64,6 +65,7 @@ jobs:
   modeldeploy-staging:
     runs-on: ubuntu-latest
     environment: 'STAGE-MODEL-DEPLOY'
+    needs: modeltrain-staging
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10

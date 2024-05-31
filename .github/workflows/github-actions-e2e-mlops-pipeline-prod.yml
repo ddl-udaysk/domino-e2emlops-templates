@@ -41,6 +41,7 @@ jobs:
   modeltrain-prod:
     runs-on: ubuntu-latest
     environment: 'PROD-MODEL-TRAIN'
+    needs: dataprep-prod
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -64,6 +65,7 @@ jobs:
   modeldeploy-prod:
     runs-on: ubuntu-latest
     environment: 'PROD-MODEL-DEPLOY'
+    needs: modeltrain-prod
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10

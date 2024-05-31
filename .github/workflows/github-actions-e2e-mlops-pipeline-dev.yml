@@ -41,6 +41,7 @@ jobs:
   modeltrain-dev:
     runs-on: ubuntu-latest
     environment: 'DEV-MODEL-TRAIN'
+    needs: dataprep-dev
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
@@ -64,6 +65,7 @@ jobs:
   modeldeploy-dev:
     runs-on: ubuntu-latest
     environment: 'DEV-MODEL-DEPLOY'
+    needs: modeltrain-dev
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.10
