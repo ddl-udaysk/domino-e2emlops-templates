@@ -102,7 +102,7 @@ def main():
 
     job_start(
             start_job_url,
-            get_project_id(domino_url, env_variables["DOMINO_PROJECT_NAME"], inputs.DOMINO_USER_API_KEY),
+            get_project_id(domino_url, env_variables["DOMINO_PROJECT_NAME"], inputs.DOMINO_USER_API_KEY)[0]["id"],
             inputs.DOMINO_USER_API_KEY,
             env_variables["DOMINO_MODEL_TRAIN_SCRIPT"],
             inputs.DOMINO_ENV.lower()[:inputs.DOMINO_ENV.lower().find("-")],
