@@ -3,6 +3,7 @@ import argparse, os
 import logging
 from domino import Domino
 import requests
+import json
 from utils import read_config as read_config
 from utils import parse_evn_var as parse_evn_var
 from utils import parse_args as parse_args
@@ -93,7 +94,7 @@ def model_start(
     isAsync=False,
 ):
     print("model_start")
-    payload = {
+    payload = json.dumps({
     "projectId": project_id,
     "name": model_name+"_"+model_env,
     "description": model_desc,
@@ -106,8 +107,10 @@ def model_start(
     "logHttpRequestResponse": True,
     "isAsync": False,
     "strictNodeAntiAffinity": False
-    }
+    })
 
+    print("start_job_url ::",start_job_url)
+    print("payload ::",payload)
     headers = {"X-Domino-Api-Key": user_api_key}
     response = requests.post(start_job_url, headers=headers, json=payload)
     print(response.text)
