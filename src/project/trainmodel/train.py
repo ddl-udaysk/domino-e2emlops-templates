@@ -38,7 +38,7 @@ def main():
             mlflow.sklearn.log_model(
                 lr,
                 "ElasticNet",
-                registered_model_name=model_name,
+             #  registered_model_name=model_name,
                 input_example=X_train
             )
 
