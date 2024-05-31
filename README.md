@@ -43,7 +43,7 @@ The project utilizes GitHub Actions workflows located in the `.github/workflows/
 7. The approval process from one stage to another involves approving the stage change in GitHub and in the model registery for model governed by experiment manager. 
 
 ### ENVVIRONMENT VARIABLES
-    DOMINO_ENV" : "Environment in which the current pipeline is running example DEV, STAGE or PROD"
+    DOMINO_ENV" : "Environment in which the current pipeline is running example DEV, STAGE or PROD".
 
 ### SECRETS
     DOMINO_USER_API_KEY : "Domino user API Key."
