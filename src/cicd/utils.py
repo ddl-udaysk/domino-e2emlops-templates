@@ -20,7 +20,7 @@ def parse_args():
 def read_config(section, key):
    config = configparser.ConfigParser()
    dir_path = os.path.dirname(os.path.realpath(__file__))
-   filepath = dir_path + "/" + "env-variables.ini"
+   filepath = dir_path + "/" + "cicd-e2e-mlops-env-variables.ini"
    config.read(filepath)
    return config[section][key]
 
