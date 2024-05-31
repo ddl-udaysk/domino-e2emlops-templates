@@ -81,8 +81,6 @@ def model_start(
     project_id,
     model_name,
     model_desc,
-    model_file,
-    model_func,
     model_registered_name,
     model_registered_version,
     hardware_tier_id,
@@ -236,3 +234,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
