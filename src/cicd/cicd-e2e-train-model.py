@@ -76,7 +76,7 @@ def job_start(
     )
 
     response = requests.request("POST", start_job_url, headers=headers, data=payload)
-    print("job id :: ", response)
+    print("job id :: ", response.text)
 
 
 def job_stop(domino, job_id):
