@@ -17,6 +17,7 @@ def get_owner_id(domino_url, user_api_key):
     url = f"https://{domino_url}/v4/users/self"
     headers = {"X-Domino-Api-Key": user_api_key}
     response = requests.get(url, headers=headers)
+    print(response)
     return response.json()
 
 
