@@ -107,7 +107,7 @@ def main():
             inputs.DOMINO_USER_API_KEY,
             env_variables["DOMINO_DATA_PREP_SCRIPT"],
             inputs.DOMINO_ENV.lower(),
-            env_variables["DOMINO_HARDWARE_TIER"],
+            env_variables["DOMINO_HARDWARE_TIER_NAME"],
             env_variables["DOMINO_ENVIRONMENT_ID"],
     )
 

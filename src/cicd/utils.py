@@ -38,7 +38,7 @@ def parse_evn_var(env_variables,section):
     env_variables["DOMINO_MODEL_FILE"] = read_config(section, "domino_model_file")
     env_variables["DOMINO_MODEL_FUNC"] = read_config(section, "domino_model_func")
     env_variables["DOMINO_MODEL_CE"] = read_config(section, "domino_model_ce")
-    env_variables["DOMINO_HARDWARE_TIER_NAME"] = read_config(section, "domino_hardware_tier")
+    env_variables["DOMINO_HARDWARE_TIER_NAME"] = read_config(section, "domino_hardware_tier_name")
     env_variables["DOMINO_ENVIRONMENT_ID"] = read_config(section, "domino_environment_id")
     env_variables["DOMINO_REGISTERED_MODEL_NAME"] = read_config(section, "domino_registered_model_name")
     env_variables["DOMINO_REGISTERED_MODEL_VERSION"] = read_config(section, "domino_registered_model_version")
