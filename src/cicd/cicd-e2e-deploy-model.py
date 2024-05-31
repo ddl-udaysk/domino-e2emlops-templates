@@ -94,7 +94,7 @@ def model_start(
     isAsync=False,
 ):
     print("model_start")
-    payload = json.dumps({
+    payload = {
     "projectId": project_id,
     "name": model_name+"_"+model_env,
     "description": model_desc,
@@ -107,7 +107,7 @@ def model_start(
     "logHttpRequestResponse": True,
     "isAsync": False,
     "strictNodeAntiAffinity": False
-    })
+    }
 
     print("start_job_url ::",start_job_url)
     print("payload ::",payload)
