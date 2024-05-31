@@ -40,7 +40,7 @@ The project utilizes GitHub Actions workflows located in the `.github/workflows/
 4. User adds for data preparation script which can include data cleansing and imputation to dataprep folder of  src/project, and registers the script in "cicd-e2e-mlops-env-variables.ini" conf file with key DOMINO_DATA_PREP_SCRIPT( example DOMINO_DATA_PREP_SCRIPT = 'src/project/dataprep/data.py')
 5. User adds the model training script with mlflow using runs and experiment management to trainmodel folder of src/project, and registers them in the "cicd-e2e-mlops-env-variables.ini" conf file with key DOMINO_MODEL_TRAIN_SCRIPT( example DOMINO_MODEL_TRAIN_SCRIPT = 'src/project/trainmodel/train.py')
 6. When the user merges the code to the appropriate branch(dev, stage, prod), this would trigger the CI/CD pipeline via GitHub Actions workflows of the corresponding stage.
-7. The approval process from one stage to another involves approving the stage change in GitHub and in the model registery for model governed by experiment manager. 
+7. The approval process from one stage to another involves approving the stage change in GitHub and in the model registery for model governed by experiment manager.. 
 
 ### ENVVIRONMENT VARIABLES
     DOMINO_ENV" : "Environment in which the current pipeline is running example DEV, STAGE or PROD".
