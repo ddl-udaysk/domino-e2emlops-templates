@@ -76,6 +76,8 @@ def job_start(
     }
     )
 
+    print("payload ::" ,payload)
+
     response = requests.request("POST", start_job_url, headers=headers, data=payload)
     print("job id :: ", response.text)
 
